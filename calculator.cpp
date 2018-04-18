@@ -168,19 +168,29 @@ list<string> Calculator::split_calc(string s){
 
 //////////////////////////////////////////////////////////////////////////////
 // fonction récursive//
-unsigned long factoriel(unsigned long n)
+double factoriel(long double n)
 {
-   if (n < 0) {
-      exit (EXIT_FAILURE);
-   }
-   else if (n == 1 || n == 0) {
-      return 1;
-   }
-  
-   return (n * factoriel (n - 1));
+   double resultat;
+   if(n==floor(n))
+   {
+	   if (n < 0) 
+	   {
+	      exit (EXIT_FAILURE);
+	   }
+	   else if (n == 1 || n == 0)
+	   {
+	      return 1;
+	   }
+	    resultat= (n * factoriel (n - 1));
+	}
 
+   else 
+   {
+   	 resultat=tgammal(n);
+    
+   }
+   return resultat;   
 }
-
 
 string Calculator::exec_calc(string a, string b, string op){
 	double x(atof(a.c_str())),y(atof(b.c_str()));

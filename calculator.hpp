@@ -7,6 +7,7 @@
 #include "Erreur.hpp"
 #include <cmath>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -18,9 +19,7 @@ const string op_size_3("exp cos sin tan log");
 const string op_size_4("sqrt Fact");
 const string op_size_5("arccos arcsin arctan");
 
-unsigned long factoriel(unsigned long n); // Calculer le factoriel d'un nombre entier,
-// faire les modifications nécesssaire pour qu'elle prend un double en entrée  (le factroriel d'un nombre négatif n'existe pas)
-// Le calcul du factorielle d'un nombre décimale depend de la fonction Gamma à revoir,
+double factoriel(long double n);
 
 class Calculator{
 	private:

@@ -39,4 +39,7 @@ TEST_CASE( "Calculator", "All" ){
 	Calculator c9("Fact(3)");
 	CHECK(c9.getResult() == "6");
 
+	Calculator c10("Fact(1.5)");
+	CHECK(c10.getResult() == "0.886227");
+
 }
